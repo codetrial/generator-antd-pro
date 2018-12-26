@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "felixpy",
+      "authorEmail": "felixpy.1993@gmail.com",
+      "authorUrl": "https://felixpy.com/"
+    }
+  }
+}
