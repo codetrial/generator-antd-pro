@@ -16,6 +16,14 @@ npm install -g yo
 yarn global add yo
 ```
 
+### 安装 Generator
+
+```bash
+npm install -g generator-antd-pro
+# OR
+yarn global add generator-antd-pro
+```
+
 ### 创建项目
 
 ```bash
