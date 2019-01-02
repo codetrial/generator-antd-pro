@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/npm/v/generator-antd-pro.svg)](https://www.npmjs.com/package/generator-antd-pro)
 [![License](https://img.shields.io/npm/l/generator-antd-pro.svg)](https://www.npmjs.com/package/generator-antd-pro)
 [![Dependencies](https://img.shields.io/david/codetrial/generator-antd-pro.svg)](https://www.npmjs.com/package/generator-antd-pro)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/codetrial/generator-antd-pro)
 
 An easy way to build your ant-design-pro application.
 
@@ -20,6 +21,14 @@ You must install Yeoman CLI before you start:
 npm install -g yo
 # OR
 yarn global add yo
+```
+
+### Install
+
+```bash
+npm install -g generator-antd-pro
+# OR
+yarn global add generator-antd-pro
 ```
 
 ### Creating Your Project

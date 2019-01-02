@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/npm/v/generator-antd-pro.svg)](https://www.npmjs.com/package/generator-antd-pro)
 [![License](https://img.shields.io/npm/l/generator-antd-pro.svg)](https://www.npmjs.com/package/generator-antd-pro)
 [![Dependencies](https://img.shields.io/david/codetrial/generator-antd-pro.svg)](https://www.npmjs.com/package/generator-antd-pro)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/codetrial/generator-antd-pro)
 
 快速构建你的 ant-design-pro 应用。
 
@@ -20,6 +21,14 @@
 npm install -g yo
 # OR
 yarn global add yo
+```
+
+### 安装
+
+```bash
+npm install -g generator-antd-pro
+# OR
+yarn global add generator-antd-pro
 ```
 
 ### 创建项目
