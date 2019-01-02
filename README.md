@@ -9,6 +9,12 @@ An easy way to build your ant-design-pro application.
 
 :us: English | [:cn: 简体中文](README.zh-CN.md)
 
+## Docs
+
+[:zap: Live Demo](https://generator-antd-pro.netlify.com) | [:book: Docs](https://codetrial.github.io/antd-pro)
+
+## Screen Capture
+
 ![Screen Capture](.github/preview.gif)
 
 ## Getting Started
@@ -48,10 +54,6 @@ A simple template that only contains basic list pages and form pages, without un
 ```bash
 yo antd-pro:simple
 ```
-
-## Docs
-
-The full documentation: [:book: codetrial.github.io/antd-pro](https://codetrial.github.io/antd-pro)
 
 ## Core Features
 

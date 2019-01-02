@@ -9,6 +9,12 @@
 
 :cn: 简体中文 | [:us: English](README.md)
 
+## 文档
+
+[:zap: 在线示例](https://generator-antd-pro.netlify.com) | [:book: 参考文档](https://codetrial.github.io/antd-pro)
+
+## 截图
+
 ![Screen Capture](.github/preview.gif)
 
 ## 快速开始
@@ -48,10 +54,6 @@ yo antd-pro
 ```bash
 yo antd-pro:simple
 ```
-
-## 文档
-
-完整文档参考：[:book: codetrial.github.io/antd-pro](https://codetrial.github.io/antd-pro)
 
 ## 核心功能
 
