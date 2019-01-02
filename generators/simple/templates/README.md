@@ -16,6 +16,14 @@ npm install -g yo
 yarn global add yo
 ```
 
+### Install Generator
+
+```bash
+npm install -g generator-antd-pro
+# OR
+yarn global add generator-antd-pro
+```
+
 ### Create Your Project
 
 ```bash
