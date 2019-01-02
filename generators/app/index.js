@@ -7,6 +7,8 @@ const chalk = require('chalk')
 const yosay = require('yosay')
 const fetchRemoteRepo = require('./fetchRemoteRepo')
 
+const cwd = process.cwd()
+
 module.exports = class extends Generator {
   initializing() {
     this.props = {}
@@ -55,24 +57,37 @@ module.exports = class extends Generator {
     const { projectName } = this.props
 
     if (path.basename(this.destinationPath()) !== projectName) {
+      this.log()
       this.log(
-        `\nYour project must be inside a folder named ${chalk.red.bold.underline(
+        `Your project must be inside a folder named ${chalk.red.bold.underline(
           projectName
-        )}.\nIf this folder does not exist, it will be created automatically.\n`
+        )}.`
       )
+      this.log(
+        `If this folder does not exist, it will be created automatically.`
+      )
+      this.log()
+
       mkdirp(projectName)
+
       this.destinationRoot(this.destinationPath(projectName))
     }
   }
 
   writing() {
     return fetchRemoteRepo().then(repo => {
-      this.fs.copy(repo, this.destinationPath(), { globOptions: { dot: true } })
+      this.fs.copy(repo, this.destinationPath(), {
+        globOptions: { dot: true }
+      })
     })
   }
 
   install() {
     const { packageManager } = this.props
+
+    this.log()
+    this.log(`📦  Installing additional dependencies...`)
+    this.log()
 
     switch (packageManager) {
       case 'npm':
@@ -90,14 +105,21 @@ module.exports = class extends Generator {
   }
 
   end() {
-    const { projectName } = this.props
+    const { projectName, packageManager } = this.props
 
+    this.log()
+    this.log(`🎉  Successfully created project ${chalk.yellow(projectName)}.`)
     this.log(
-      [
-        chalk.bold(`All Done!`),
-        chalk.green.bold(`cd ${projectName}`),
-        chalk.green.bold(`yarn start`)
-      ].join('\n')
+      `👉  Get started with the following commands:\n\n` +
+        (this.destinationPath() === cwd
+          ? ``
+          : chalk.cyan(` ${chalk.gray('$')} cd ${projectName}\n`)) +
+        chalk.cyan(
+          ` ${chalk.gray('$')} ${
+            packageManager === 'yarn' ? 'yarn start' : 'npm run start'
+          }`
+        )
     )
+    this.log()
   }
 }
